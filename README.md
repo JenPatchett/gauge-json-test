@@ -1,4 +1,4 @@
-# gauge-maven-test
+# gauge-json-test
 A Gauge, Maven, Java API testing framework using [JSON-Server](https://github.com/typicode/json-server) 
 
 To run this project, first clone it to your computer, then skip to **Setup JSON Server** section to continue setup. 
@@ -15,7 +15,7 @@ Maven > Project SDK *(choose version)*
 
 Click Next
 
-GroupId: `com.sky`
+GroupId: `com.yourname`
 
 ArtifactId *(your project name)*: `gauge-json-test`
 
@@ -60,6 +60,8 @@ If you cloned this project and did not create your own framework then **skip** t
 some data'* step as this file already exists in this project. 
 
 ### ALSO NOTE:
-If you cloned this project and go to http://localhost:3000/posts/1 as per the 
-[JSON-Server](https://github.com/typicode/json-server) setup instructions, you'll see different data in the responses 
-as my db.json file contains different data to the example data in the setup instructions.
+If you cloned this project the endpoints mentioned in [JSON-Server](https://github.com/typicode/json-server) setup instructions won't work. You'll also see different data in the responses as my db.json file contains different data to the example data in the setup instructions.
+
+The endpoints for this project are `/users` and `/products`
+
+All data from db.json can be returned with the following URL: http://localhost:3000/ after starting json-server in the Terminal using the following command: `json-server --watch db.json`
