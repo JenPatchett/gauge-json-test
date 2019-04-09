@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "title": "Mr",
+      "firstName": "Joe",
+      "lastName": "Shmoe"
+    },
+    {
+      "id": 2,
+      "title": "Miss",
+      "firstName": "Jane",
+      "lastName": "Lane"
+    },
+    {
+      "id": 3,
+      "title": "Mr",
+      "firstName": "Ben",
+      "lastName": "Ten"
+    },
+    {
+      "id": 4,
+      "title": "Mr",
+      "firstName": "Jake",
+      "lastName": "Fake"
+    },
+    {
+      "id": 5,
+      "title": "Mrs",
+      "firstName": "Dee",
+      "lastName": "Bee"
+    },
+    {
+      "title": "Mr",
+      "firstName": "Dan",
+      "lastName": "Man",
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "title": "Dr",
+      "firstName": "George",
+      "lastName": "Forge",
+      "id": 10
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "item": "bread"
+    },
+    {
+      "id": 2,
+      "item": "butter"
+    },
+    {
+      "id": 3,
+      "item": "cheese"
+    },
+    {
+      "item": "coffee",
+      "id": 4
+    },
+    {
+      "item": "milk",
+      "id": 5
+    }
+  ]
+}
