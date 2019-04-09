@@ -60,8 +60,8 @@ If you cloned this project and did not create your own framework then **skip** t
 some data'* step as this file already exists in this project. 
 
 ### ALSO NOTE:
-If you cloned this project the endpoints mentioned in [JSON-Server](https://github.com/typicode/json-server) setup instructions won't work. You'll also see different data in the responses as my db.json file contains different data to the example data in the setup instructions.
+If you cloned this project the endpoints mentioned in [JSON-Server](https://github.com/typicode/json-server) setup instructions won't work. You'll also see the data in my db.json file is different to the example data in the setup instructions.
 
 The endpoints for this project are `/users` and `/products`
 
-All data from db.json can be returned with the following URL: http://localhost:3000/ after starting json-server in the Terminal using the following command: `json-server --watch db.json`
+All data from db.json can be returned with the following URL: http://localhost:3000/db after starting json-server in the Terminal using the following command: `json-server --watch db.json`
