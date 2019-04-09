@@ -15,7 +15,7 @@ Maven > Project SDK *(choose version)*
 
 Click Next
 
-GroupId: `com.sky`
+GroupId: `com.yourname`
 
 ArtifactId *(your project name)*: `gauge-json-test`
 
