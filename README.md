@@ -64,4 +64,4 @@ If you cloned this project the endpoints mentioned in [JSON-Server](https://gith
 
 The endpoints for this project are `/users` and `/products`
 
-All data from db.json can be returned with the following URL: http://localhost:3000/db after starting json-server in the Terminal using the following command: `json-server --watch db.json`
+All data from db.json can be returned with the following URL: http://localhost:3000/db after starting json-server in the Terminal using the following command: `json-server --watch db.json`. To stop json-server type `ctrl` + `c`
