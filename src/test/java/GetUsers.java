@@ -1,51 +1,34 @@
-import com.fasterxml.jackson.databind.JsonNode;
-import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Step;
-import com.thoughtworks.gauge.datastore.DataStore;
-import com.thoughtworks.gauge.datastore.DataStoreFactory;
-import io.grpc.netty.shaded.io.netty.handler.codec.http.HttpMethod;
-import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.junit.Assert;
 
+import java.io.IOException;
+
 import static constants.Env.APP_ENDPOINT;
-import static org.junit.Assert.*;
 
 public class GetUsers {
 
-    private DataStore dataStore = DataStoreFactory.getScenarioDataStore();
-    protected HttpRequest httpRequest
+    HttpClient httpClient = HttpClientBuilder.create().build();
 
-    public void simpleGetRequest(DataStore dataStore) {
-        if (!httpRequest.equals(HttpMethod.GET)) {
-            throw new RuntimeException("Method does not match requested GET");
-        }
-        bodylessRequest(dataStore, null);
-    }
+    private static final String URL = System.getenv(APP_ENDPOINT);
 
     @Step("Get all users")
     public void getAllUsers() {
-        String url = System.getenv(APP_ENDPOINT) + "/users/";
-        createRangoRequest(url).simpleGetRequest(dataStore);
-    }
-
-    @Step("Get user by Id")
-    public void getUserById() {
+        String url = URL + "/users/";
 
     }
 
-    @Step("Get user by firstName")
-    public void getUserByFirstName() {
+    @Step("Returns response with status of <expectedStatus>")
+    public void assertStatusCode(int expectedStatus) throws IOException {
 
-    }
+        HttpGet getStatus = new HttpGet(URL + "/users");
+        HttpResponse httpResponse = httpClient.execute(getStatus);
+        int actualStatus = httpResponse.getStatusLine().getStatusCode();
 
-    @Step("Returns response with status of <statusCode>")
-    public void assertResponseCode(int statusCode) {
-        String url = "http://localhost:3000/" + "users";
-        Integer httpResponseCode = (Integer) dataStore.get("httpResponseCode");
-
-        assertEquals(statusCode, httpResponseCode);
-
+        Assert.assertEquals(expectedStatus, actualStatus);
     }
 
 
